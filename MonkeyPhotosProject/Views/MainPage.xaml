@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonkeyPhotosProject.MainPage"
+             xmlns:ViewModel="clr-namespace:MonkeyPhotosProject.ViewModel"
+             xmlns:Model="clr-namespace:MonkeyPhotosProject.Models"
+             x:DataType="ViewModel:MainPageViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button Text="up" Command="{Binding upButtonCommand}" HeightRequest="50" WidthRequest="100"/>
+            
+            <Image Source="{Binding monkey.image}" HeightRequest="200" />
+            
+            <Label Text="{Binding monkey.name}"/>
+            <Label Text="{Binding monkey.details}"/>
+            <Label Text="{Binding monkey.location}"/>
+            <Label Text="{Binding monkey.population}"/>
+            <Label Text="{Binding monkey.latitude}"/>
+            <Label Text="{Binding monkey.longitude}"/>
+            
+            <Button Text="down" Command="{Binding downButtonCommand}"
+               HeightRequest="50" WidthRequest="100" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
